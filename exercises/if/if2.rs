@@ -7,6 +7,7 @@
 
 //使用return 提前返回
 pub fn foo_if_fizz(fizzish: &str) -> &str {
+    // if else 分支需要返回相同的数值
     if fizzish == "fizz" {
         return "foo"
     } else if fizzish == "fuzz" {
