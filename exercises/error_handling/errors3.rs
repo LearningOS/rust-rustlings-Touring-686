@@ -4,7 +4,6 @@
 // Why not? What should we do to fix it?
 // Execute `rustlings hint errors3` or use the `hint` watch subcommand for a hint.
 
-// I AM NOT DONE
 
 use std::num::ParseIntError;
 
@@ -12,8 +11,10 @@ fn main() {
     let mut tokens = 100;
     let pretend_user_input = "8";
 
-    let cost = total_cost(pretend_user_input)?;
-
+    let cost = total_cost(pretend_user_input).unwrap(); // 取出cost的值
+    // 删掉？的原因，与遇到错误回提前返回，返回类型是Result
+    // The ? operator follows the Result value returned by File::open, 
+    // but this main function has the return type of (), not Result
     if cost > tokens {
         println!("You can't afford that many!");
     } else {
