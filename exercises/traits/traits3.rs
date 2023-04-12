@@ -7,10 +7,11 @@
 // Consider what you can add to the Licensed trait.
 // Execute `rustlings hint traits3` or use the `hint` watch subcommand for a hint.
 
-// I AM NOT DONE
-
 pub trait Licensed {
-    fn licensing_info(&self) -> String;
+    // default implementation
+    fn licensing_info(&self) -> String {
+        "Some information".to_string()
+    }
 }
 
 struct SomeSoftware {
@@ -20,6 +21,11 @@ struct SomeSoftware {
 struct OtherSoftware {
     version_number: String,
 }
+
+
+// trait can then use the default version of these functions 
+// if they choose not implement the function themselves.
+// struct 使用trait 默认实现的方法
 
 impl Licensed for SomeSoftware {} // Don't edit this line
 impl Licensed for OtherSoftware {} // Don't edit this line
