@@ -42,7 +42,6 @@ mod my_module {
                     trim_s.to_string()
                 }
                 Command::Append(ntime) => {
-                    // 为什么ntime要解引用???
                     let bar_str:String= "bar".to_string();
                     let result  = string.to_string() + &bar_str.repeat(*ntime);
                     // repeat返回String
